@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0f0e">
+  <meta name="description" content="Zelora designs modern, mobile-friendly websites for local businesses and tradespeople.">
+  <title>Zelora | Websites for Local Businesses</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0b0f0e;
+      color: #f4f7f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid #222b27;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #65e6a4;
+    }
+
+    .nav-link {
+      color: #d0d9d3;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 100px 0 85px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #65e6a4;
+      border: 1px solid #285a43;
+      background: #11271c;
+      border-radius: 50px;
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 8vw, 76px);
+      line-height: 1.08;
+      letter-spacing: -3px;
+      max-width: 850px;
+      margin: 0 auto 24px;
+    }
+
+    h1 span {
+      color: #65e6a4;
+    }
+
+    .hero p {
+      max-width: 610px;
+      margin: auto;
+      color: #aab7af;
+      font-size: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .primary {
+      background: #65e6a4;
+      color: #07120b;
+    }
+
+    .primary:hover {
+      background: #8af0ba;
+    }
+
+    .secondary {
+      border: 1px solid #39443e;
+      color: #f4f7f5;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-label {
+      color: #65e6a4;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 5vw, 42px);
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      color: #aab7af;
+      max-width: 580px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .card {
+      background: #111815;
+      border: 1px solid #26332c;
+      border-radius: 14px;
+      padding: 25px;
+    }
+
+    .card-icon {
+      font-size: 27px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: #aab7af;
+      font-size: 14px;
+    }
+
+    .project {
+      background: #111815;
+      border: 1px solid #26332c;
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .project p {
+      color: #aab7af;
+      font-size: 14px;
+      margin-top: 8px;
+      max-width: 570px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #65e6a4;
+      background: #183326;
+      border-radius: 5px;
+      padding: 4px 9px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      background: #111815;
+      border-top: 1px solid #26332c;
+      border-bottom: 1px solid #26332c;
+      text-align: center;
+    }
+
+    .contact p {
+      max-width: 570px;
+      margin: 0 auto;
+      color: #aab7af;
+    }
+
+    footer {
+      padding: 25px 0;
+      color: #89968e;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        padding: 75px 0 60px;
+      }
+
+      h1 {
+        letter-spacing: -1.8px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 23px;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">zelora<span>.</span></a>
+        <a href="#contact" class="nav-link">Let's talk ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Web design for local business</div>
+        <h1>Your business deserves a <span>better website.</span></h1>
+        <p>
+          Modern, mobile-friendly websites designed to help local
+          businesses present their services clearly and make it easier
+          for customers to get in touch.
+        </p>
+
+        <div class="buttons">
+          <a href="#contact" class="button primary">Discuss a website ↗</a>
+          <a href="#work" class="button secondary">View our work</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-label">What we do</div>
+        <h2>Simple websites. Thoughtfully designed.</h2>
+        <p class="section-intro">
+          Practical websites for tradespeople and small businesses
+          that want a professional online presence.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">✳</div>
+            <h3>Website design</h3>
+            <p>
+              A clean, professional website built around your business,
+              services and the customers you want to reach.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">▣</div>
+            <h3>Mobile-friendly</h3>
+            <p>
+              Layouts designed to work across phones, tablets and
+              desktop screens.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">↗</div>
+            <h3>Clear contact options</h3>
+            <p>
+              Make it easier for potential customers to understand
+              your services and find your contact details.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-label">Selected work</div>
+        <h2>A look at what we can build.</h2>
+        <p class="section-intro">
+          An example of our website design approach.
+        </p>
+
+        <div class="project">
+          <div>
+            <span class="tag">CONCEPT PROJECT</span>
+            <h3>Oakline Home Services</h3>
+            <p>
+              A fictional home-services business used to demonstrate
+              a modern website layout for a local trades business.
+            </p>
+          </div>
+
+          <a
+            class="button primary"
+            href="https://aaronmccarthy-cloud.github.io/oakline-home-services/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View demo ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-label">Get in touch</div>
+        <h2>Have a business website in mind?</h2>
+        <p>
+          If you're a local business or tradesperson looking for a
+          website, get in touch to discuss your ideas and requirements.
+        </p>
+
+        <div class="buttons">
+          <!-- Replace the email below with your real business email. -->
+          <a
+            class="button primary"
+            href="mailto:REPLACE-WITH-YOUR-EMAIL@example.com?subject=Website%20enquiry"
+          >
+            Email Zelora ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="#" class="logo">zelora<span>.</span></a>
+      <p>© 2026 Zelora. Website design for local businesses.</p>
+    </div>
+  </footer>
+</body>
+</html>
